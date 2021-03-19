@@ -34,7 +34,7 @@ def Main():
     mcc_score_per_protein["protein"] = proteins
     mcc_score_per_protein.set_index('protein', inplace=True)
     np.seterr(all='raise')
-    for predictor in predictors:
+    for ∆ in predictors:
             # print(predictor)
             TP_sum = 0
             FP_sum =0

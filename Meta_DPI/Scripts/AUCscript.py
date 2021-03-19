@@ -30,22 +30,14 @@ def Main():
     
 
 def ROC(params):
-    
     results_dict= {}
     pr_dict = {}
     (predictor,df) = params    
     df["protein"] = [x.split('_')[1] for x in df.index]
     proteins = df["protein"].unique()
-    # print(proteins)
-    # print(df.head())
     df = df[df['annotated'] != "ERROR"]    
-    # print(annotated_res)
-    # TPRS = []
-    # FPRS = []
-    # Thresholds = []
     for i in np.arange(0.00, 1.02, .01):
         threshhold = float(str(round(i,2)))  
-        # print(threshhold)
         TP_sum = 0
         FP_sum =0
         negs_sum = 0
@@ -111,6 +103,8 @@ def ROC(params):
     sum_AUC = AUC.sum()
     ROC_AUC = sum_AUC
 
+
+
     PR_frame = pd.DataFrame.from_dict(pr_dict,columns = ["Precision","Recall"],orient= 'index')
     # print(results_frname)
     distance = PR_frame["Recall"].diff()
@@ -120,7 +114,7 @@ def ROC(params):
     PR_AUC = PR_AUC/2
     sum_AUC = PR_AUC.sum()
     PR_AUC = sum_AUC
-    return predictor , ROC_AUC ,PR_AUC
+    return predictor , ROC_AUC ,PR_AUC, PR_frame,results_frame
     
 # if __name__ == '__main__':
 #     Main()

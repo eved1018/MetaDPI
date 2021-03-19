@@ -37,3 +37,23 @@ from pathlib import Path
 # df = pd.DataFrame(columns=["A","B"])
 # df = df.rename(columns={"A":"C"})
 # print(df.head())
+# i = 7.8
+# print(f"int:{int(i)}\nfloat:{float(i)}\nstring:{str(i)}")
+#%%
+predictors = ["hello","hi"]
+cols = [[f"{key}_FPR",f"{key}_TPR"] for key in predictors]
+import itertools
+print(list(itertools.chain(*cols)))
+# %%
+import pandas as pd
+df = pd.read_csv("/Users/user/Desktop/Research_Evan/Raji_Summer2019_atom/Meta_DPI/Results/CrossValidation/Crossvaltest2/PR_csv.csv")
+cols = df.columns.tolist()
+cols.remove()
+
+# %%
+li = []
+li = [(x,x+1,x+2) for x in range(0,10)]
+for i in li:
+    (a,b,c) = i 
+    print(a)
+# %%
