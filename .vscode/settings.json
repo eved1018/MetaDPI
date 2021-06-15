@@ -1,0 +1,14 @@
+{
+    "python.pythonPath": "/Users/evanedelstein/.pyenv/versions/3.9.4/envs/RajiResearch3.9.4/bin/python",
+    "git.ignoreLimitWarning": true,
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#25252528",
+        "activityBar.background": "#25252528",
+        "activityBar.border": "#0202029f",
+        
+        
+    
+    },
+    "editor.minimap.maxColumn": 60
+}

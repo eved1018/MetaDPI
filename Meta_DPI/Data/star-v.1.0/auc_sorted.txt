@@ -1,7 +1,5 @@
 TEST	AUC
-T4	0.914572
-T5	0.905464
-T3	0.881546
-T2	0.816816
-T1	0.769475
-protein	0.518331
+logreg	0.90467
+vorffip	0.902646
+rfscore	0.865876
+meta-ppisp	0.806145
